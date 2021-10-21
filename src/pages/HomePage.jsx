@@ -4,7 +4,7 @@ import DareCard from "../components/DareCard/DareCard";
 
 function HomePage() {
     return (
-    <div>
+    <div id="dares-list">
     {allDares.map((DareData, key) => {
     return <DareCard key={key} DareData={DareData} />;
     })}
