@@ -6,7 +6,7 @@ function HomePage() {
     return (
     <div id="dares-list">
     {allDares.map((DareData, key) => {
-    return <DareCard key={key} DareData={DareData} />;
+    return <DareCard key={key} daresData={DareData} />;
     })}
     </div>
     );
