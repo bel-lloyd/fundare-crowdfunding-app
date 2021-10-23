@@ -4,8 +4,9 @@ import "./App.css";
 import Nav from "./components/Nav/Nav";
 import HomePage from "./pages/HomePage";
 import DarePage from "./pages/DarePage";
+import LoginPage from "./pages/LoginPage";
 
-function App() {
+function App() {  
   return (
     <Router>
     <div>
@@ -14,6 +15,9 @@ function App() {
     <Switch>
           <Route path="/dares/:id">
           <DarePage />
+          </Route>
+          <Route path="/login">
+          <LoginPage />
           </Route>
           <Route path="/">
           <HomePage />

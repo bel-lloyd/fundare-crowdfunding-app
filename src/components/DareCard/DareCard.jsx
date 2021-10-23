@@ -6,10 +6,10 @@ function DareCard (props) {
     const { daresData } = props;
     return (
         <div className="dare-card">
-        <Link to="`/dares/${daresData.id`}">
-        <img src={daresData.image }/>
-        <h3>{daresData.title}</h3>
-        </Link>
+            <Link to={`/dares/${daresData.id}`}>
+                <img src={daresData.image }/>
+                <h3>{daresData.title}</h3>
+            </Link>
         </div>
     );
 }

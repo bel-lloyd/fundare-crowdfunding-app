@@ -7,25 +7,31 @@ function DarePage() {
 
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}dares/${id}`)
-        .then((results) => {
-        return results .json();
-        })
-        .then((data) => {
-        setDareData(data);
-        });
+            .then((results) => {
+            console.log("results", results);
+            return results.json();
+            })
+            .then((data) => {
+                console.log("data", data);
+                setDareData(data);
+            });
     },  []);
 
     return (
-    <div>
-    <h2>{dareDare.title}</h2>
-    <h3>Created at: {dareDare.date_created}</h3>
-    <h3>{`Status: ${dareDare.is_open}`}</h3>
-    <h3>Dollars:</h3>
-    <ul>
-    {dareDare.dollars.map((dollarsData, key) => {
+        <div>
+            <h2>{dareData.title}</h2>
+            <h3>What's the dare?</h3>
+            <p>{dareData.dare_description}</p>
+            <h3> Who does the dare care for?</h3>
+            <p>{dareData.for_charity}</p>
+            <h3>Created at: {dareData.created_at}</h3>
+            <h3>{`Status: ${dareData.is_open}`}</h3>
+            <h3>Dollars:</h3>
+            <ul>
+            {dareData.dollars.map((dollarsData, key) => {
         return (
         <li>
-        ${dollarsData.amount} from {dollarsData.supporter} supporters
+        ${dollarsData.goal} from {dollarsData.supporter} supporters
         </li>
         );
     })}
