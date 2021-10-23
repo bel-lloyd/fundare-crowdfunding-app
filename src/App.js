@@ -12,7 +12,7 @@ function App() {
     <Nav />
     
     <Switch>
-          <Route path="/dares">
+          <Route path="/dares/:id">
           <DarePage />
           </Route>
           <Route path="/">
