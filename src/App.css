@@ -12,3 +12,47 @@ body, html {
   max-width: 100%;
   margin:0;
 }
+
+.dare-page a {
+  padding: 20px;
+  font-family: spartan, sans-serif;
+  font-weight: 200;
+}
+
+nav a {
+  display: flex;
+  background-color: #fff;
+  font-family: spartan, sans-serif;
+  font-weight: 600;
+  color: #38F3FF;
+  text-transform: capitalize;
+  padding: 30px;
+  justify-content: center;
+}
+
+a:link {
+  color:black;
+}
+
+a:hover {
+  color: #38F3FF;
+  transform: scale(1.2);
+}
+
+a:focus {
+  border-bottom: 1px solid black;
+  font-weight: 600;
+}
+
+.dare-page img {
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("https://raw.githubusercontent.com/bel-lloyd/my-files/master/Untitled%20design%20(17).png"); */
+  height: 400px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* position: relative; */
+  display: flex;
+  justify-content: left;
+  /* margin: 0px -100px 0px -100px auto; */
+  padding: 20px;
+}

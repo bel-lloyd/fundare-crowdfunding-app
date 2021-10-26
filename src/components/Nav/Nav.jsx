@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Nav() {
-    const token = window.localStorage.getItem('token')
 
     return (
         <nav>

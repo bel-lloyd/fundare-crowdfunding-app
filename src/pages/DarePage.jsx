@@ -18,8 +18,9 @@ function DarePage() {
     },  []);
 
     return (
-        <div>
+        <div class="dare-page">
             <h2>{dareData.title}</h2>
+            <img src={dareData.image }/>
             <h3>What's the dare?</h3>
             <p>{dareData.dare_description}</p>
             <h3> Who does the dare care for?</h3>
