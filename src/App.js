@@ -5,11 +5,13 @@ import Nav from "./components/Nav/Nav";
 import HomePage from "./pages/HomePage";
 import DarePage from "./pages/DarePage";
 import LoginPage from "./pages/LoginPage";
+import Header from "./components/Header/Header";
 
 function App() {  
   return (
     <Router>
     <div>
+    <Header />
     <Nav />
     
     <Switch>

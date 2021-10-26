@@ -1,0 +1,14 @@
+header img{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+header h2{
+    font-family: spartan, sans-serif;
+    font-weight: 600;
+    color: #38F3FF;
+    text-transform: capitalize;
+    padding: 30px;
+    justify-content: center;
+}
