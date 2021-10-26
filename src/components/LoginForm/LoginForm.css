@@ -1,0 +1,30 @@
+body {
+    border: 15px;
+}
+
+form {
+    background-color: white;
+    padding: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+form label {
+    padding: 30px;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+

@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lato&family=Spartan:wght@100;200;300;400;500;600&display=swap');
+
 #dares-list {
   display: grid;
   grid-template-columns: 30% 30% 30%;
   column-gap: 10px;
   row-gap: 10px;
+}
+
+body, html {
+  height: 100%;
+  max-width: 100%;
+  margin:0;
 }

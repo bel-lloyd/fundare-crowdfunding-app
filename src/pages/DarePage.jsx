@@ -24,7 +24,9 @@ function DarePage() {
             <p>{dareData.dare_description}</p>
             <h3> Who does the dare care for?</h3>
             <p>{dareData.for_charity}</p>
-            <h3>Created at: {dareData.created_at}</h3>
+            <h3>Ok cool! What are the rules?</h3>
+            <p>{dareData.rules}</p>
+            <h3>Date for dare: {dareData.created_at}</h3>
             <h3>{`Status: ${dareData.is_open}`}</h3>
             <h3>Dollars:</h3>
             <ul>
@@ -33,7 +35,7 @@ function DarePage() {
         <li>
         ${dollarsData.goal} from {dollarsData.supporter} supporters
         </li>
-        );
+        )
     })}
     </ul>
     </div>

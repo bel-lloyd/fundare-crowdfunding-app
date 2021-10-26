@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import "./LoginForm.css";
 
 function LoginForm() {
     const [credentials, setCredentials] = useState({
