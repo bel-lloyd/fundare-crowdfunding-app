@@ -2,46 +2,24 @@
 
 #dares-list {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
-  column-gap: 10px;
-  row-gap: 10px;
+  grid-template-columns: 32% 32% 32%;
+  column-gap: 15px;
+  row-gap: 15px;
 }
 
 body, html {
   height: 100%;
   max-width: 100%;
   margin:0;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
 }
 
 .dare-page a {
   padding: 20px;
   font-family: spartan, sans-serif;
   font-weight: 200;
-}
-
-nav a {
-  display: flex;
-  background-color: #fff;
-  font-family: spartan, sans-serif;
-  font-weight: 600;
-  color: #38F3FF;
-  text-transform: capitalize;
-  padding: 30px;
-  justify-content: center;
-}
-
-a:link {
-  color:black;
-}
-
-a:hover {
-  color: #38F3FF;
-  transform: scale(1.2);
-}
-
-a:focus {
-  border-bottom: 1px solid black;
-  font-weight: 600;
 }
 
 .dare-page img {
@@ -55,4 +33,13 @@ a:focus {
   justify-content: left;
   /* margin: 0px -100px 0px -100px auto; */
   padding: 20px;
+}
+
+h1 {
+  color: black;
+  font-family: spartan, sans-serif;
+}
+
+.login-page {
+  background-color: #38F3FF;
 }

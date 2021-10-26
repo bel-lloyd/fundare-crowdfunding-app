@@ -1,25 +1,26 @@
-body {
-    border: 15px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lato&family=Spartan:wght@100;200;300;400;500;600&display=swap');
 
 form {
-    background-color: white;
     padding: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Spartan, sans-serif;
     display: flex;
-    justify-content: space-around;
-    align-content: center;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 
 form label {
     padding: 30px;
 }
 
+form input {
+    padding: 10px;
+}
+
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     align-items: center;
-    color: white;
+    color: black;
 }
 
 .logo {

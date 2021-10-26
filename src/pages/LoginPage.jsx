@@ -3,8 +3,7 @@ import LoginForm from '../components/LoginForm/LoginForm';
 
 function LoginPage() {
     return (
-        <div>
-            <img class="logo" src="https://raw.githubusercontent.com/bel-lloyd/my-files/master/Fundare%20Logo.png"/>
+        <div class="login-page">      
             <h1>Login to funDare</h1>
             <LoginForm/>
         </div>

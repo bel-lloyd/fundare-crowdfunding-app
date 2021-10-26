@@ -1,2 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lato&family=Spartan:wght@100;200;300;400;500;600&display=swap');
 
+nav a {
+    display: flex;
+    flex-direction: row;
+    font-family: spartan, sans-serif;
+    font-weight: 600;
+    color: #38F3FF;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 20px;
+  }
+  
+  a:hover {
+    color: black;
+    transform: scale(1.1);
+  }
+  
+  a:focus {
+    border-bottom: 1px solid black;
+    font-weight: 600;
+  }
+
+nav {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
