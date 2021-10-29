@@ -44,7 +44,7 @@ function LoginForm() {
 
     return (
         <form>
-        <div>
+        <div class="label">
         <label htmlFor="username">Username:</label>
         <input 
             type="text"
@@ -53,7 +53,7 @@ function LoginForm() {
             onChange={handleChange}
         />
         </div>
-        <div>
+        <div class="label">
         <label htmlFor="password">Password:</label>
         <input
             type="password"

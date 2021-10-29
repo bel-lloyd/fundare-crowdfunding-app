@@ -4,8 +4,9 @@ import "./App.css";
 import Nav from "./components/Nav/Nav";
 import HomePage from "./pages/HomePage";
 import DarePage from "./pages/DarePage";
-import LoginPage from "./pages/LoginPage";
+import AuthPage from "./pages/AuthPage";
 import Header from "./components/Header/Header";
+import SubmitDarePage from "./pages/SubmitDarePage";
 
 function App() {  
   return (
@@ -16,13 +17,16 @@ function App() {
     
     <Switch>
           <Route path="/dares/:id">
-          <DarePage />
+            <DarePage />
           </Route>
-          <Route path="/login">
-          <LoginPage />
+          <Route path="/authenticate">
+            <AuthPage />
           </Route>
-          <Route path="/">
-          <HomePage />
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route path="/submitdare">
+            <SubmitDarePage />
           </Route>
     </Switch>
     </div>
