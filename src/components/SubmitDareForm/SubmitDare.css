@@ -1,0 +1,42 @@
+.submit-page {
+    border-radius: 0.45rem;
+    box-shadow: 0 11px 32px rgb(31 119 166 / 70%);
+    padding: 40px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    background-color: #38F3FF;
+    margin-bottom: 30px;
+}
+
+form {
+    font-family: Spartan, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form label {
+    padding: 20px 0px 20px 0px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-page input {
+    padding: 15px;
+    font-size: 16px;
+    font-family: spartan, sans-serif;
+}
+
+h1 {
+    font-family: spartan, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    text-align: center;
+}
