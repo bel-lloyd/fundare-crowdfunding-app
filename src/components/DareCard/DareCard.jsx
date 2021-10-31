@@ -7,8 +7,10 @@ function DareCard (props) {
     return (
         <div className="dare-card">
             <Link to={`/dares/${daresData.id}`}>
-                <img src={daresData.image }/>
-                <h3>{daresData.title}</h3>
+                <div class="card">
+                    <img src={daresData.image }/>
+                    <div class="centered">{daresData.title}</div>
+                </div>
             </Link>
         </div>
     );

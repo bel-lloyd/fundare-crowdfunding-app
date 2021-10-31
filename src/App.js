@@ -7,6 +7,7 @@ import DarePage from "./pages/DarePage";
 import AuthPage from "./pages/AuthPage";
 import Header from "./components/Header/Header";
 import SubmitDarePage from "./pages/SubmitDarePage";
+import Footer from "./components/Footer/Footer";
 
 function App() {  
   return (
@@ -29,6 +30,8 @@ function App() {
             <SubmitDarePage />
           </Route>
     </Switch>
+
+    <Footer />
     </div>
     </Router>
   );

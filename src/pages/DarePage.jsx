@@ -53,8 +53,8 @@ const DarePage = () => {
     const ReadDare = () => {
         return (
             <div className="dare">
-                <h1>{dareData.title}</h1>
-                <img src={dareData.image}/>
+                <h2>{`${dareData.title}`}</h2>
+                <h2>{`to support ${dareData.for_charity}`}</h2>
                 <h3>{`What's the dare: ${dareData.description}`}</h3>
                 <h4>{`Who's the dare care for: ${dareData.for_charity}`}</h4>
                 <a href={dareData.charity_url}>{dareData.for_charity}</a>

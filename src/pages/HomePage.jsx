@@ -20,7 +20,6 @@ function HomePage() {
     {dareList.map((DareData, key) => {
     return <DareCard key={key} daresData={DareData} />;
     })}
-    <h2>Funded by Fundare</h2>
     </div>
     );
 }

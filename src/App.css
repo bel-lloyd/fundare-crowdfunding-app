@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lato&family=Spartan:wght@100;200;300;400;500;600&display=swap');
 
+/* * {
+  border: 1px solid fuchsia;
+} */
+
 #dares-list {
   display: grid;
-  grid-template-columns: 32% 32% 32%;
+  grid-template-columns: 31% 31% 31%;
   column-gap: 25px;
   row-gap: 25px;
 }
@@ -14,6 +18,17 @@ body {
   padding: 5px;
   display: flex;
   justify-content: center;
+}
+
+.dare {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.dare h3 {
+  text-transform: uppercase;
+  text-align: left;
 }
 
 .dare-page {
@@ -34,11 +49,11 @@ body {
   padding: 0px 40px 0px 40px;
 }
 
-.dare-page h1, h2, h3 {
+/* .dare-page h1, h2, h3 {
   text-transform: uppercase;
   font-weight: 600;
   font-family: spartan, sans-serif;
-}
+} */
 .dare-page img {
   /* background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("https://raw.githubusercontent.com/bel-lloyd/my-files/master/Untitled%20design%20(17).png"); */
   background-position: top;
@@ -84,5 +99,5 @@ button {
   background-color: darkslategrey;
   color: white;  
   border-radius: .45rem;
-  margin-top: 20px;
+  margin-top: 30px;
 }
