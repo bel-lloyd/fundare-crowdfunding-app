@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "../../../simple-message"
+		},
+		{
+			"path": "../../../todo-list"
+		},
+		{
+			"path": "../../../rock-paper-scissors"
+		},
+		{
+			"path": "../../../whack-a-mole"
+		},
+		{
+			"path": "../../../shopping-cart"
+		},
+		{
+			"path": "../../../react-router-tutorial"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {}
+}

@@ -17,7 +17,7 @@ function AuthPage() {
             ? (<div class="login-page">      
                 <h2>Register for Fundare</h2>
                 <LoginForm/>
-                <h3>Not yet registered? Click below to get started.</h3>
+                <h3>Already have an account? Click below to login.</h3>
                 <ToggleButton/>
             </div>)
             : (<div class="login-page">      

@@ -5,6 +5,7 @@ const DarePage = () => {
     const [dareData, setDareData] = useState({dollars: [] });
     const [isEditing, setIsEditing] = useState(false);
     const { id: dare_id } = useParams();
+    console.log (dare_id)
 
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}dares/${dare_id}`)
@@ -29,7 +30,7 @@ const DarePage = () => {
         e.preventDefault()
         
         const response = await fetch(`
-        ${process.env.REACT_APP_API_URL}dares/${dare_id}`, 
+        ${process.env.REACT_APP_API_URL}dares/`, 
         {
         method: "put",
         headers: {
@@ -37,11 +38,19 @@ const DarePage = () => {
             "Content-Type": "application/json",
         }, 
         body: JSON.stringify({
+            id: dareData.id,
             title: dareData.title,
             rules: dareData.rules,
             dare_description: dareData.dare_description,
             image: dareData.image,
-            is_open: dareData.is_open
+            is_open: dareData.is_open,
+            goal: dareData.goal,
+            created_at: dareData.created_at,
+            updated_at: dareData.updated_at,
+            date_for_dare: dareData.date_for_dare,
+            for_charity: dareData.for_charity,
+            charity_url: dareData.charity_url,
+            owner: dareData.owner
         }
         ),
     }
