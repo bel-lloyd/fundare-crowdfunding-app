@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 
 const DarePage = () => {
     const [dareData, setDareData] = useState({dollars: [] });
@@ -25,6 +25,8 @@ const DarePage = () => {
             [id]: value
         })
     }
+
+    const history = useHistory();
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -59,18 +61,17 @@ const DarePage = () => {
     setIsEditing(false)
 }
 
-//     const DeleteDare = () => {
-//         await 
-//         fetch(`${process.env.REACT_APP_API_URL}dares/${dare_id}`, {
-//         method: "delete",
-//         headers: {
-//         "Authorization": `Token ${localStorage.getItem('token')}`
-//         }
-//     })
-//   // Once we delete the project above, we then want to navigate back to the homepage
-//   // since the project we are looking at, doesn't exist anymore
-//   history.push('/')
-// }
+    const deleteDare = async () => {
+        await fetch(`${process.env.REACT_APP_API_URL}dares/${dare_id}`, {
+            method: "delete",
+            headers: {
+            "Authorization": `Token ${localStorage.getItem('token')}`
+            }
+        })
+        // Once we delete the project above, we then want to navigate back to the homepage
+        // since the project we are looking at, doesn't exist anymore
+        history.push('/')
+    }
 
     const formattedDate = new Date(dareData?.created_at).toDateString()
     
@@ -113,10 +114,14 @@ const DarePage = () => {
         <div class="dare-page">
             <h2>{dareData.title} to support {dareData.for_charity}</h2>
             <img src={dareData.image }/>
-            { 
-                localStorage.getItem("token") 
-                && isEditing == false
-                && <button onClick={() => setIsEditing(true)}>Edit This Dare</button> 
+                { 
+                    localStorage.getItem("token") 
+                    && isEditing == false
+                    && <button onClick={() => setIsEditing(true)}>Edit This Dare</button> 
+                }
+                {
+                    localStorage.getItem('token')
+                    && <button onClick={deleteDare}>Delete This Dare</button>
                 }
                 <div>
                     {

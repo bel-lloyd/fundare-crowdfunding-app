@@ -8,6 +8,7 @@ import AuthPage from "./pages/AuthPage";
 import Header from "./components/Header/Header";
 import SubmitDarePage from "./pages/SubmitDarePage";
 import Footer from "./components/Footer/Footer";
+import DonatePage from "./pages/DonatePage";
 
 function App() {  
   return (
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/submitdare">
             <SubmitDarePage />
+          </Route>
+          <Route path="/donate">
+            <DonatePage />
           </Route>
     </Switch>
 
