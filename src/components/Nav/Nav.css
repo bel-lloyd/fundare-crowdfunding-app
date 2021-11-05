@@ -5,10 +5,17 @@ nav a {
     flex-direction: row;
     font-family: spartan, sans-serif;
     font-weight: 600;
-    color: #38F3FF;
+    color: darkslategrey;
     text-transform: uppercase;
     font-size: 14px;
     padding: 20px;
+    text-shadow: 1px 1px 2px rgb(192, 230, 255);
+    text-decoration: inherit;
+      text-decoration-line: underline;
+      text-decoration-thickness: 5px;
+      text-decoration-style: solid;
+      text-decoration-color: #38F3FF;
+
   }
   
   a:hover {

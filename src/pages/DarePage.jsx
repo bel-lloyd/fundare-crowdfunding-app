@@ -8,7 +8,7 @@ const DarePage = () => {
     console.log (dare_id)
 
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}dares/${dare_id}`)
+        fetch(`${process.env.REACT_APP_API_URL}dares/${dare_id}/`)
         .then((results) => {
             return results.json();
         })
@@ -30,7 +30,7 @@ const DarePage = () => {
         e.preventDefault()
         
         const response = await fetch(`
-        ${process.env.REACT_APP_API_URL}dares/`, 
+        ${process.env.REACT_APP_API_URL}dares/${dare_id}/`, 
         {
         method: "put",
         headers: {
@@ -59,32 +59,55 @@ const DarePage = () => {
     setIsEditing(false)
 }
 
+//     const DeleteDare = () => {
+//         await 
+//         fetch(`${process.env.REACT_APP_API_URL}dares/${dare_id}`, {
+//         method: "delete",
+//         headers: {
+//         "Authorization": `Token ${localStorage.getItem('token')}`
+//         }
+//     })
+//   // Once we delete the project above, we then want to navigate back to the homepage
+//   // since the project we are looking at, doesn't exist anymore
+//   history.push('/')
+// }
+
+    const formattedDate = new Date(dareData?.created_at).toDateString()
+    
     const ReadDare = () => {
         return (
-            <div className="dare">
-                <h2>{`${dareData.title}`}</h2>
-                <h2>{`to support ${dareData.for_charity}`}</h2>
-                <h3>{`What's the dare: ${dareData.description}`}</h3>
-                <h4>{`Who's the dare care for: ${dareData.for_charity}`}</h4>
-                <a href={dareData.charity_url}>{dareData.for_charity}</a>
-                <h3>Ok cool! What are the rules?</h3>
-                <p>{dareData.rules}</p>
-                <h3>Date for dare: {dareData.created_at}</h3>
-                <h3>{`Status: ${dareData.is_open}`}</h3>
-                <h3>Dollars for Dare:</h3>
-                <ul>
-                    {dareData.dollars.map((dollarsData, key) => {
-                        return(
-                            <li key={key}>
-                                {dollarsData.amount} from
-                                {dollarsData.supporter}
-                            </li>
-                            );
-                    })}
-                </ul>
-            </div>
+            <div className="dare-info">
+                <div className="dare">
+                    <h2>{`${dareData.title}`}</h2>
+                    <h2>{`to support ${dareData.for_charity}`}</h2>
+                    <h3>What's the dare? </h3>
+                    <p>{dareData.dare_description}</p>
+                    <h3>Who's the dare care for?</h3>
+                    <p>{dareData.for_charity}</p>
+                    <h3>Check them out here.</h3>
+                    <a href={dareData.charity_url}>{dareData.for_charity}</a>
+                    <h3>Ok cool! What are the rules?</h3>
+                    <p>{dareData.rules}</p>
+                    <h3>Date for dare:</h3>
+                    <p>{formattedDate}</p>
+                    <h3>Dare still on?</h3>
+                    <p>{`It is ${dareData.is_open} that this dare is still on.`}</p>
+                    <h3>Dollars for Dare: </h3>
+                    <ul>
+                        {dareData.dollars.map((dollarsData, key) => {
+                            return(
+                                <li key={key}>
+                                    ${dollarsData.amount} donated kindly by     
+                                    {dollarsData.supporter} who wants to say
+                                    "{dollarsData.comment}"
+                                </li>
+                                );
+                        })}
+                    </ul>
+                </div>
+           </div>
         )
-    }
+    }   
 
     return (
         <div class="dare-page">

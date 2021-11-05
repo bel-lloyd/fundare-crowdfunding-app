@@ -6,9 +6,9 @@
 
 #dares-list {
   display: grid;
-  grid-template-columns: 31% 31% 31%;
-  column-gap: 25px;
-  row-gap: 25px;
+  grid-template-columns: 30% 30% 30%;
+  column-gap: 40px;
+  row-gap: 30px;
 }
 
 body {
@@ -23,45 +23,54 @@ body {
 .dare {
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+  width: 85%;
+  border-radius: .45rem;
+  margin-bottom: 50px;
 }
 
-.dare h3 {
+.dare-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.dare h2 {
   text-transform: uppercase;
   text-align: left;
+  color: black;
 }
 
 .dare-page {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-color: #38F3FF;
   color: darkslategrey;
   text-align: center;
+  align-items: center;
 }
+
+.dare-page button {
+  width: 30%;
+}
+
+.dare-page img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: .45rem;
+  box-shadow: 0 11px 32px rgb(31 119 166 / 40%);
+}
+
 .dare-page a {
   padding: 20px;
   font-family: spartan, sans-serif;
   font-weight: 600;
   color: black;
-}
-
-.dare-page p {
-  padding: 0px 40px 0px 40px;
-}
-
-/* .dare-page h1, h2, h3 {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-family: spartan, sans-serif;
-} */
-.dare-page img {
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("https://raw.githubusercontent.com/bel-lloyd/my-files/master/Untitled%20design%20(17).png"); */
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* position: relative; */
-  display: flex;
-  /* margin: 0px -100px 0px -100px auto; */
 }
 
 h1 {
@@ -84,6 +93,7 @@ h3 {
   text-align: center;
   font-family: spartan, sans-serif;
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 button {
@@ -100,4 +110,14 @@ button {
   color: white;  
   border-radius: .45rem;
   margin-top: 30px;
+}
+
+.dare p {
+  padding: 5px 30px 5px 30px;
+  font-family: spartan, sans-serif;
+}
+
+.dare li {
+  text-align: left;
+  font-family: spartan, sans-serif;
 }
